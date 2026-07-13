@@ -35,7 +35,7 @@
 </select>
 ```
 
-# 19. Search Bar
+# Search Bar
 
 ```html
 <div role="search">
