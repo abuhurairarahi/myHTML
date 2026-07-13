@@ -44,7 +44,7 @@
 </div>
 ```
 
-# optgroup: Taking "Categorized" Data as Input
+# optgroup: Selecting from "Categorized" Data as Input
 
 After declaring the label:
 
