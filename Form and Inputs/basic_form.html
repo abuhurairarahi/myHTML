@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--making a search bar-->
+    <!-- <div role="search">
+        <input type="search" name="q" aria-label="Search products">
+        <button type="submit">Search</button>
+    </div> -->
+
+    <h1
+        style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 20px;">
+        #Basic From</h1>
+
+    <form action="#" method="post"
+        style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 12px;">
+        <!-- action="" <-- this attribute sets the location, where the data will be saved after submission  -->
+
+        <!--Taking "hidden" info (not visible to user) as input-->
+        <input type="hidden" name="application_title" value="Programmer">
+
+        <!--Taking "text" as input-->
+        <label for="firstName">First Name</label>
+        <input type="text" name="first_name" id="firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="last_name" id="lastName">
+
+        <br><br>
+
+        <!--Taking "date (not synced with local-time)" as input-->
+        <label for="DOB">Date of Birth</label>
+        <input type="date" name="date_of_birth" id="DOB">
+
+        <!--Taking input from a "drop-down selector" (singular selection)-->
+        <label for="selectGender">Gender</label>
+        <select name="gender" id="selectGender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <!--Taking "number" (int/float) as input-->
+        <label for="height">Define your height</label>
+        <input type="number" name="height" id="others" min="0" max="10">
+
+        <br><br>
+
+        <!--Taking "email" as input-->
+        <label for="emailAddress">Email</label>
+        <input type="email" name="email_address" id="emailAddress">
+
+        <!--Taking "tel" (phone-number) as input-->
+        <label for="phone">Phone No.</label>
+        <input type="tel" name="phone_number" id="phone">
+
+        <br><br>
+
+        <!--Making a set of option field-->
+        <fieldset style="width: 450px;">
+            <legend>Check your interest:</legend>
+
+            <!--Taking inputs using "checkbox" (multiple-selections)-->
+            <input type="checkbox" name="your_interest" id="front_end">
+            <label for="front_end">Front-End</label>
+            <br>
+            <input type="checkbox" name="your_interest" id="back_end">
+            <label for="back_end">Back-End</label>
+            <br>
+            <input type="checkbox" name="your_interest" id="network_security">
+            <label for="network_security">Network & Secutiry</label>
+        </fieldset>
+
+        <br>
+
+        <!--Taking "color" as input-->
+        <label for="color">Enter your favourite color</label>
+        <input type="color" name="user_favcolor" id="color">
+
+        <br><br>
+
+        <fieldset style="width: 450px;">
+            <legend>Did you ever participated in any competiton?</legend>
+
+            <!--Taking inputs using "radio" (multiple choice single selection)-->
+            <input type="radio" name="q1" id="yes">
+            <label for="yes">Yes</label>
+            <br>
+            <input type="radio" name="q1" id="no">
+            <label for=" no">No</label>
+        </fieldset>
+
+        <br>
+
+        <!--Taking "url" as input-->
+        <label for="gitlink">Enter the GitHub link</label>
+        <input type="url" name="user_git" id="gitlink">
+
+        <!--Taking "Catagorized" data as input-->
+        <label for="lang">Select Language</label>
+        <select name="proglang" id="lang">
+            <optgroup label="Front-End">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JS">Java Script</option>
+            <option value="RJS">React JS</option>
+            </optgroup>
+            <optgroup label="Back-End">
+            <option value="NJS">Node JS</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
+        <!--Taking "file" uploading input-->
+        <label for="cv">Upload your CV</label>
+        <input type="file" name="user_cv" id="cv">
+
+        <br><br>
+
+        <!--Taking "date-time" synced with local-clock type input-->
+        <label for="time">Enter upload time</label>
+        <input type="datetime-local" name="upload_datetime" id="time">
+
+        <br><br>
+
+        <!--Taking "password" as input-->
+        <label for="pass">Enter a Password</label>
+        <input type="password" name="user_pass" id="pass">
+
+        <br><br>
+
+        <!--Taking "paragraph" as input-->
+        <label for="about_user">Write about your-self</label> <br>
+        <textarea name="about" id="about_user" style="width: 400px;"></textarea>
+
+        <br><br>
+        
+        <!--Setting up "submit" type input button-->
+        <input type="submit" value="submit">
+
+        <!--Setting up "reset" type input button-->
+        <input type="reset" value="reset">
+
+    </form>
+
+</body>
+
+</html>
