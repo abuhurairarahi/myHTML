@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2</title>
+</head>
+<body>
+    <!--
+    CSS: Cascading Styling Sheet
+    attribute: class="" means giving label to an element.
+    -->
+
+    <style>
+        p {  /* CSS Selector */
+            color: red;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 12px; /* CSS Property */
+        }
+
+        .uber_button {
+            color: white;
+            background-color: black;
+            border: none;
+            height: 35px;
+            width: 115px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .amazon_button {
+            color: black;
+            background-color: rgb(255, 216, 20);
+            border: none;
+            height: 30px;
+            width: 140px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .github_button {
+            background-color: rgb(46, 164, 79);
+            color: white;
+            border: none;
+            height: 32px;
+            width: 78px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .bootstrap_button_one {
+            color: white;
+            background-color: rgb(121, 82, 179);
+            border: none;
+            height: 33px;
+            width: 95px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            margin: 0px 5px 0px 0px;
+        }
+
+        .bootstrap_button_two {
+            background-color: white;
+            color: rgb(108, 117, 125);
+            border-width: 1.5px;
+            border-style: solid;
+            border-color: rgb(108, 117, 125);
+            height: 33px;
+            width: 95px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .linkedIn_button_one {
+            color: white;
+            background-color: rgb(10, 102, 194);
+            border: none;
+            height: 32px;
+            width: 188px;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .linkedIn_button_two {
+            color: rgb(10, 102, 194);
+            background-color: white;
+            border-width: 1.5px;
+            border-style: solid;
+            border-color: rgb(10, 102, 194);
+            height: 32px;
+            width: 65px;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .hint {
+            font-size: 10px;
+            font-style: italic;
+            color: gray;
+        }
+
+        .back_link {
+            color: rgb(0, 113, 133);
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-weight: bold;
+        }
+
+        .price_stock {
+            color: rgb(0, 118, 0);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .delivery_message {
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .exe_button_one {
+            color: black;
+            background-color: rgb(255, 216, 20);
+            border: none;
+            border-radius: 16px;
+            height: 26px;
+            width: 98px;
+            font-size: 11px;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        .exe_button_two {
+            color: black;
+            background-color: rgb(255, 164, 28);
+            border: none;
+            border-radius: 16px;
+            height: 26px;
+            width: 98px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+    </style>
+
+    <p>2a. Uber Buttor</p>
+    <button class="uber_button">Request now</button>
+
+    <p>2b. Amazon Button</p>
+    <button class="amazon_button">Add to Cart</button>
+
+    <p>2c. GitHub Button</p>
+    <button class="github_button">Sign up</button>
+
+    <p>2d. Bootstrap Button</p>
+    <button class="bootstrap_button_one">Get started</button>
+    <button class="bootstrap_button_two">Download</button>
+
+    <p>2e. LinkedIn Button</p>
+    <button class="linkedIn_button_one">Apply on company website</button>
+    <button class="linkedIn_button_two">Save</button>  
+    
+    <p>2f. Continuing from exercise 1g. recreate this design using CSS: </p>
+    <p class="hint">(hint: you'll need the CSS properties: color, font-weight, and font-size)</p>
+    <br>
+    <a href="https://www.amazon.com/" class="back_link">Back to Amazon</a>
+    <p class="title">Nike Black Running Shoes</p>
+    <p class="price_stock">$39 - in stock.</p>
+    <p class="delivery_message">Free delivery tomorrow.</p>
+    <button class="exe_button_one">Add to Cart</button>
+    <button class="exe_button_two">Buy now</button>
+</body>
+</html>

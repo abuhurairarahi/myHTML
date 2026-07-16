@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+</head>
+<body>
+    <!-- Using CSS Box-Model: Margin > Border > Padding -->
+
+    <style>
+        /*
+        CSS BOX-MODEL: Optimal use instead of height & width --> padding
+                     ________________
+                    | ______________>|> > Margin  [Top]
+                    | | __________ |-|--> Border  [Mid] 
+                    | | |________|>|>|> > Padding [Low]
+                    | |____________| |
+                    |________________|
+        
+        */
+        p {  /* CSS Selector */
+            color: red;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 12px; /* CSS Property */
+        }
+
+        .uber_button {
+            color: white;
+            background-color: black;
+            border: none;
+            padding: 10.5px 22.5px 10.5px 22.5px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: opacity 0.15s; /* hover_action_property transition_time(in second) */
+        }
+
+        .uber_button:hover {
+            opacity: 0.9;
+        }
+
+        .uber_button:active {
+            opacity: 0.7;
+        }
+
+        .amazon_button {
+            color: black;
+            background-color: rgb(255, 216, 20);
+            border: none;
+            padding: 8px 40px 8px 40px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+
+        .amazon_button:hover {
+            background-color: rgb(244, 206, 14);
+        }
+
+        .amazon_button:active {
+            background-color: rgb(255, 214, 12);
+        }
+
+        .github_button {
+            background-color: rgb(46, 164, 79);
+            color: white;
+            border: none;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 17px;
+            padding-right: 17px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(0,0,0,0); /* horizontal-vertical-blur-shadow_color */
+            transition: box-shadow 0.15s; /* hover_action_property transition_time(in second) */
+        }
+
+        .github_button:hover {
+            box-shadow: 0px 2.5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .bootstrap_button_one {
+            color: white;
+            background-color: rgb(121, 82, 179);
+            border: none;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            margin: 0px 5px 0px 0px; /* top-right-bottom-left */
+            transition: opacity 0.15s;
+        }
+
+        .bootstrap_button_one:hover {
+            opacity: 0.9;
+        }
+
+        .bootstrap_button_one:active {
+            opacity: 0.7;
+        }
+
+        .bootstrap_button_two {
+            background-color: white;
+            color: rgb(108, 117, 125);
+            border-width: 1.5px;
+            border-style: solid;
+            border-color: rgb(108, 117, 125);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.15s, color 0.15s;
+        }
+
+        .bootstrap_button_two:hover {
+            background-color: rgb(108, 117, 125);
+            color: white;
+        }
+
+        .bootstrap_button_two:active {
+            background-color: rgb(79, 88, 95);
+            color: white;
+        }
+
+        .linkedIn_button_one {
+            color: white;
+            background-color: rgb(10, 102, 194);
+            border: none;
+            padding: 9px 18px 9px 18px;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+            vertical-align: top;
+        }
+        
+        .linkedIn_button_two {
+            color: rgb(10, 102, 194);
+            background-color: white;
+            border-width: 1.5px;
+            border-style: solid;
+            border-color: rgb(10, 102, 194);
+            padding: 7.8px 18px 7.8px 18px;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.15s, border-width 0.15s;
+        }
+
+        .linkedIn_button_one:hover {
+            background-color: rgb(8, 82, 155);
+        }
+
+        .linkedIn_button_two:hover {
+            background-color: rgba(10, 102, 194, 0.1);
+            border-width: 2px;
+        }
+
+        .hint {
+            font-size: 10px;
+            font-style: italic;
+            color: gray;
+        }
+
+        .back_link {
+            color: rgb(0, 113, 133);
+            font-size: 14px;
+            transition: color 0.15s;
+        }
+
+        .title {
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-weight: bold;
+        }
+
+        .back_link:hover {
+            color: brown;
+        }
+
+        .price_stock {
+            color: rgb(0, 118, 0);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .delivery_message {
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .exe_button_one {
+            color: black;
+            background-color: rgb(255, 216, 20);
+            border: none;
+            border-radius: 16px;
+            padding: 7px 26px 7px 26px;
+            font-size: 11px;
+            margin-right: 6px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+
+        .exe_button_one:hover {
+            background-color: rgb(244, 206, 14);
+        }
+
+        .exe_button_one:active {
+            background-color: rgb(255, 214, 12);
+        }
+
+        .exe_button_two {
+            color: black;
+            background-color: rgb(255, 164, 28);
+            border: none;
+            border-radius: 16px;
+            padding: 7px 30px 7px 30px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+
+        .exe_button_two:hover {
+            background-color: rgb(237, 152, 24);
+        }
+
+        .exe_button_two:active {
+            background-color: rgba(255, 164, 28, 0.6);
+        }
+
+        .back_button {
+            padding: 6px 6px 6px 6px;
+            margin: 0px 5px 0px 0px;
+        }
+
+        .page_link {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .next_button {
+            padding: 6px 6px 6px 6px;
+            margin: 0px 0px 0px 5px;
+        }
+
+        .Stretch_button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 6px 12px 6px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: padding 0.75s;
+        }
+
+        .Stretch_button:hover {
+            padding: 18px 36px 18px 36px;
+        }
+
+        .threeD_button{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 6px 12px 6px 12px;
+            font-size: 16px;
+            box-shadow: 4px 4px 2px rgba(0,0,0,0.5);
+            transition: margin 0.25s, box-shadow 0.25s;
+        }
+
+        .threeD_button:hover {
+            box-shadow: none;
+            margin: 4px 0px 0px 4px;
+        }
+
+        .number_button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            margin: 0px 5px 0px 5px;
+            transition: padding 0.25s, margin 0.25s;
+        }
+
+        .number_button:hover {
+            padding: 10px 20px;
+            margin: 0px 0px;
+        }
+
+    </style>
+
+    <p>4a. Uber Buttor</p>
+    <button class="uber_button">Request now</button>
+
+    <p>4b. Amazon Button</p>
+    <button class="amazon_button">Add to Cart</button>
+
+    <p>4c. GitHub Button</p>
+    <button class="github_button">Sign up</button>
+
+    <p>4d. Bootstrap Button</p>
+    <button class="bootstrap_button_one">Get started</button>
+    <button class="bootstrap_button_two">Download</button>
+
+    <p>4e. LinkedIn Button</p>
+    <button class="linkedIn_button_one">Apply on company website</button>
+    <button class="linkedIn_button_two">Save</button>  
+    
+    <p>4f. Continuing from exercise 1g. recreate this design using CSS: </p>
+    <p class="hint">(hint: you'll need the CSS properties: color, font-weight, and font-size)</p>
+    
+    <br>
+    
+    <a href="https://www.amazon.com/" class="back_link">Back to Amazon</a>
+    <p class="title">Nike Black Running Shoes</p>
+    <p class="price_stock">$39 - in stock.</p>
+    <p class="delivery_message">Free delivery tomorrow.</p>
+    <button class="exe_button_one">Add to Cart</button>
+    <button class="exe_button_two">Buy now</button>
+    
+    <br>
+    <br>
+    
+    <p>4g. Pagination</p>
+    <button class="back_button">Back</button>
+    <a class="page_link" href="https://www.google.com">1</a>
+    <a class="page_link" href="https://www.google.com">2</a>
+    <a class="page_link" href="https://www.google.com">3</a>
+    <a class="page_link" href="https://www.google.com">4</a>
+    <a class="page_link" href="https://www.google.com">5</a>
+    <button class="next_button">Next</button>
+
+    <p>4h. Stretch</p>
+    <button class="Stretch_button">Stretch</button>
+
+    <p>4i. 3d Click</p>
+    <button class="threeD_button">Shadow</button>
+    
+    <p>4j. Margin and Padding together: </p>
+    <button class="number_button">One</button>
+    <button class="number_button">Two</button>
+    <button class="number_button">Three</button>
+</body>
+</html>
