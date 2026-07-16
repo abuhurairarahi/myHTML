@@ -9,16 +9,27 @@
     <!-- Using CSS Box-Model: Margin > Border > Padding -->
 
     <style>
-        /*
-        CSS BOX-MODEL: Optimal use instead of height & width --> padding
-                     ________________
-                    | ______________>|> > Margin  [Top]
-                    | | __________ |-|--> Border  [Mid] 
-                    | | |________|>|>|> > Padding [Low]
-                    | |____________| |
-                    |________________|
+    /*
+        CSS BOX MODEL:
+
+        ┌─────────────────────────────────┐
+        │            MARGIN               │
+        │  ┌─────────────────────────────┐│
+        │  │           BORDER            ││
+        │  │  ┌───────────────────────┐  ││
+        │  │  │        PADDING        │  ││
+        │  │  │  ┌─────────────────┐  │  ││
+        │  │  │  │     CONTENT     │  │  ││
+        │  │  │  │  width × height │  │  ││
+        │  │  │  └─────────────────┘  │  ││
+        │  │  └───────────────────────┘  ││
+        │  └─────────────────────────────┘│
+        └─────────────────────────────────┘
+
+        Order (outside → in): margin → border → padding → content
+        Optimal use is CSS Box-Model instead of height and width.
         
-        */
+    */
         p {  /* CSS Selector */
             color: red;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
