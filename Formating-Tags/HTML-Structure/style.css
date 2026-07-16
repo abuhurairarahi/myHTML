@@ -1,0 +1,21 @@
+body {
+    margin: 0px 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.sub-heading {
+    font-size: 18.5px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+
+.underline_text {
+    text-decoration: underline;
+}
